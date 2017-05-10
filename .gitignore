@@ -1,0 +1,15 @@
+# Ignore the following file types and dirs
+*.zip
+*.log
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+.sass-cache
+*.css.map
+build/
+dist/
+node_modules/
+bower_components/
