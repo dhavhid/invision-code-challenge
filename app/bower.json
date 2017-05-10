@@ -1,0 +1,25 @@
+{
+  "name": "invision-codechallenge",
+  "authors": [
+    "David Martinez <dhavhid@gmail.com>"
+  ],
+  "description": "Invision Code Challenge",
+  "main": "",
+  "keywords": [
+    "invision",
+    "code",
+    "challenge"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
