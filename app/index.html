@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap-sass-grid/css/bootstrap-sass-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="navbar clearfix">
+			<div class="navbar-brand">
+				<img src="images/logo.png" title="simply social">
+				<span>simply</span>social
+			</div>
+			<ul class="navbar-items pull-right hidden-xs">
+				<li>
+					<a href="#" title="add Post"><img src="images/addPost.png" alt="add Post"></a>
+				</li>
+				<li class="searchbox">
+					<input type="text">
+					<img src="images/searchIcon.png">
+				</li>
+				<li>
+					<a class="profile-picture" href="#" title="">
+						<img src="images/profilepicture.png" alt="">
+						<img src="images/arrowDown.png" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container-fluid banner">
+			<div class="row">
+				<div class="calloutbox col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<form>
+								<input type="text" value="What's on your mind?">
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-sm-4 col-sm-offset-1">
+							<a href="#" title="add Photo">
+								<img src="images/photosIcon.png" alt="add Photo"> Add Photo
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-4">
+							<a href="#" title="add Video">
+								<img src="images/videosIcon.png" alt="add Video"> Add Video
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tabs">
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+					<ul>
+						<li class="active" data-filter="all">
+							<a href="#">ALL POSTS</a>
+						</li>
+						<li data-filter="photo">
+							<a href="#">PHOTOS</a>
+						</li>
+						<li data-filter="video">
+							<a href="#">VIDEOS</a>
+						</li>
+						<li class="pull-right">
+							<a href="#" title="grid View">
+								<img src="images/gridView.png" alt="grid View">
+							</a>
+						</li>
+						<li class="pull-right">
+							<a href="#" title="list View">
+								<img src="images/listView.png" alt="list View">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row content"></div>
+			<div class="row">
+				<div class="load-more col-xs-12">
+					<a href="#">LOAD MORE</a>
+				</div>
+			</div>
+		</div>
+	</div><!-- wrapper -->
+	<div class="footer">
+		<ul>
+			<li>
+				<a href="#" title="About Us">ABOUT US</a>
+			</li>
+			<li>
+				<a href="#" title="Support">SUPPORT</a>
+			</li>
+			<li>
+				<a href="#" title="Privacy">PRIVACY</a>
+			</li>
+			<li>
+				<a href="#" title="Terms">TERMS</a>
+			</li>
+			<li>&copy; 2014 SIMPLYSOCIAL</li>
+		</ul>
+	</div>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/lodash/dist/lodash.min.js"></script>
+	<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+	<script src="js/data.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@mixin opaque {
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+@mixin radius {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+@mixin proximaNovaReg {
+	font-family: "InvisionFont", Helvetica, sans-serif;
+	font-style: normal;
+}
+
+@mixin openSansReg {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@mixin openSansLight {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+@mixin openSansBold {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
