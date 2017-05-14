@@ -1,3 +1,9 @@
+/* MEDIA QUERIES */
+$screen-sm-min: "768px";
+$screen-md-min: "992px";
+$screen-lg-min: "1200px";
+
+/* FONT AND BACKGROUND COLORS */
 $background-color: #ffffff;
 $primary-color: #262728;
 $secondary-color: #2daa8c;
@@ -7,13 +13,9 @@ $gray-strong: #3f454d;
 $gray-medium: #bec3cc;
 $gray-soft: #c7ccd3;
 $gray-light: #d8dbe0;
-
 $navbar-bg-color: $primary-color;
 $navbar-font-color: $gray-medium;
-
 $calloutbox-bg-color: $secondary-color;
 $calloutbox-font-color: $gray-light;
-
 $widget-boder-color: #dee1e5;
-
 $footer-font-color: #00b286;
