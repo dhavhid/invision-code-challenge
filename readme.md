@@ -15,8 +15,8 @@ As a developer I always strive to produce the best software in terms of quality 
 You need to have installed node and npm packages before proceeding.
 
 * npm install
-* bower install
-* gulp
+* cd app && bower install
+* cd .. && gulp
 * gulp build
 
 
