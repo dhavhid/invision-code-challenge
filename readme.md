@@ -16,7 +16,7 @@ You need to have installed node and npm packages before proceeding.
 
 * npm install
 * cd app && bower install
-* gulp
+* cd .. && gulp
 * gulp build
 
 
