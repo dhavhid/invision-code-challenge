@@ -54,6 +54,12 @@
 		padding: 0px 10px 18px 10px;
 		margin-right: 30px;
 	}
+	.modal-guts a span {
+		display: inline-block;
+	}
+	.close-button {
+		right: -25px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */

@@ -2,6 +2,7 @@ html, body {
 	height: 100%;
 	margin: 0px;
 	padding: 0;
+	overflow: auto;
 }
 a,
 a:active,
@@ -31,7 +32,6 @@ a:hover {
 .navbar {
 	width: 100%;
 	height: 60px;
-	overflow: hidden;
 	line-height: 60px;
 	background-color: $navbar-bg-color;
 	position: fixed;
@@ -154,7 +154,7 @@ a:hover {
 /* TABS STYLES */
 .tabs {
 	position: relative;
-	top: -41px;
+	top: -38px;
 	@include openSansReg;
 }
 .tabs .col-* {
@@ -289,4 +289,119 @@ a:hover {
 .footer li a:visited,
 .footer li a:hover {
 	color: #00cc99;
+}
+.modal {
+	display: block;
+
+	width: 600px;
+	max-width: 100%;
+
+	height: 280px;
+	max-height: 100%;
+
+	position: fixed;
+
+	z-index: 101;
+
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #dee1e5;
+	@include radius;
+}
+.closed {
+	display: none;
+}
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: rgba(0, 0, 0, 0.7);
+}
+.modal-guts {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 20px 20px 20px 20px;
+	background-color: #dee1e5;
+	@include radius;
+	@include openSansLight;
+	font-size: 16px;
+	color: #70767f;
+}
+.modal-guts .row {
+	margin-bottom: 15px;
+}
+.modal-guts .row:first-child {
+	margin-top: 15px;
+}
+.modal-guts .row div:first-child label {
+	display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+}
+.modal-guts input[type="text"] {
+	width: 100%;
+	border: 1px solid #dee1e5;
+	background-color: #ffffff;
+	line-height: 30px;
+	padding: 3px;
+	@include radius;
+}
+.modal-guts textarea {
+	width: 100%;
+	border: 1px solid #dee1e5;
+	background-color: #ffffff;
+	resize: vertical;
+	padding: 3px 7px;
+	@include radius;
+}
+.modal-guts input[type="button"] {
+	cursor: pointer;
+	border: 0px none transparent;
+	background-color: #00b286;
+	width: 80px;
+	height: 30px;
+	padding: 1px 13px;
+	color: #ffffff;
+	float: right;
+	@include radius;
+}
+.modal-guts a,
+.modal-guts a:active,
+.modal-guts a:visited,
+.modal-guts a:hover {
+	text-decoration: none;
+	font-size: 15px;
+	color: #abb0b6;
+}
+.modal-guts a span {
+	margin-left: 5px;
+	display: none;
+}
+.modal-guts a:first-child {
+	margin-right: 20px;
+}
+.close-button {
+	position: absolute;
+    top: -25px;
+    right: 5px;
+}
+label[for="email"].valid {
+	color: #0faf1a;
+}
+label[for="email"].invalid {
+	color: red;
+}
+#email.valid {
+	border: 1px solid #0faf1a;
+}
+#email.invalid {
+	border: 1px solid red;
 }

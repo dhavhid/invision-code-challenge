@@ -1,3 +1,6 @@
+var apiKey = "07422695-8c01-4822-a418-9a17fe71f330";
+var apiUrl = "https://bpi.briteverify.com/emails.json";
+
 window.simplysocial = (function() {
 	var simplysocial = {
 		init: function(view, q) {
@@ -17,9 +20,6 @@ window.simplysocial = (function() {
 			_.forEach(posts, function(item, index) {
 				var wigdet = $this.createWidget(item, view);
 			});
-			/*$('.content').masonry({
-				itemSelector: '.widget'
-			});*/
 		},
 		createWidget: function(item, view) {
 			var _class = (view == "list") ? "widget col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" : "widget col-xs-6 col-sm-4";
@@ -86,5 +86,48 @@ $(function() {
 	$(".load-more").on("click", function(e) {
 		e.preventDefault();
 		simplysocial.loadContent("list", $(".tabs li.active").attr("data-filter"));
+	});
+	$(".add-post").on("click", function(e) {
+		e.preventDefault();
+		$(".new-post-modal").show();
+		$(".new-user-modal").hide();
+		$("#modal").css("height","250px");
+		$("#modal, #modal-overlay").removeClass("closed");
+	});
+	$(".add-user").on("click", function(e) {
+		e.preventDefault();
+		$(".new-post-modal").hide();
+		$(".new-user-modal").show();
+		$("#modal").css("height","320px");
+		$("#modal, #modal-overlay").removeClass("closed");
+	});
+	$(".close-button").on("click", function(e) {
+		e.preventDefault();
+		$("#modal, #modal-overlay").addClass("closed");
+	});
+	$(".new-user-modal input[type='button']").on("click", function() {
+		var email = $("#email").val().trim();
+		if (email.length > 0) {
+			$.get(apiUrl + "?address=" + email + "&apikey=" + apiKey, function(data) {
+				if (data.hasOwnProperty("status")) {
+					if (data.status == "valid") {
+						$("label[for='email']").removeClass("invalid").addClass("valid");
+						$("#email").removeClass("invalid").addClass("valid");
+					} else {
+						$("label[for='email']").removeClass("valid").addClass("invalid");
+						$("#email").removeClass("valid").addClass("invalid");
+					}
+				}
+			}, "jsonp");
+		} else {
+			$("label[for='email']").removeClass("valid invalid");
+			$("#email").removeClass("valid invalid");
+		}
+	});
+	$("#email").on("keyup", function() {
+		if ($(this).val().trim().length == 0) {
+			$("label[for='email']").removeClass("valid invalid");
+			$("#email").removeClass("valid invalid");
+		}
 	});
 });

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Invision Code Challenge</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap-sass-grid/css/bootstrap-sass-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
@@ -18,14 +18,14 @@
 			</div>
 			<ul class="navbar-items">
 				<li>
-					<a href="#" title="add Post"><img src="images/addPost.png" alt="add Post"></a>
+					<a href="#" title="add Post" class="add-post"><img src="images/addPost.png" alt="add Post"></a>
 				</li>
 				<li class="searchbox">
 					<input type="text">
 					<img src="images/searchIcon.png">
 				</li>
 				<li>
-					<a class="profile-picture" href="#" title="">
+					<a class="profile-picture add-user" href="#" title="">
 						<img src="images/profilepicture.png" alt="">
 						<img src="images/arrowDown.png" alt="">
 					</a>
@@ -108,9 +108,80 @@
 			<li>&copy; 2014 SIMPLYSOCIAL</li>
 		</ul>
 	</div>
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/lodash/dist/lodash.min.js"></script>
-	<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+	<div class="modal-overlay closed" id="modal-overlay"></div>
+
+	<div class="modal closed" id="modal">
+	<a href="#" title="Close" id="close-button" class="close-button"><img src="images/closeButton.png" alt="Close"></a>
+		<div class="modal-guts">
+			<div class="container-fluid new-user-modal" style="display: none;">
+				<div class="row">
+					<div class="col-xs-12">
+						Create new user
+					</div>
+				</div>
+				<form>
+					<div class="row">
+						<div class="col-xs-5 col-sm-3">
+							<label for="firstname">First Name</label>
+						</div>
+						<div class="col-xs-7 col-sm-9">
+							<input type="text" name="firstname" id="firstname">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5 col-sm-3">
+							<label for="lastname">Last Name</label>
+						</div>
+						<div class="col-xs-7 col-sm-9">
+							<input type="text" name="lastname" id="lastname">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5 col-sm-3">
+							<label for="email">Email</label>
+						</div>
+						<div class="col-xs-7 col-sm-9">
+							<input type="text" name="email" id="email" autocomplete="off">
+							<p class="validation-message"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="button" value="Submit">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="container-fluid new-post-modal">
+				<div class="row">
+					<div class="col-xs-12">
+						Create new message
+					</div>
+				</div>
+				<form>
+					<div class="row">
+						<div class="col-xs-12">
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-7">
+							<a href="#" title="add Photo">
+								<img src="images/addPhotoSmall.png" alt="add Photo"> <span>Add Photo</span>
+							</a>
+							<a href="#" title="add Video">
+								<img src="images/addVideoSmall.png" alt="add Video"> <span>Add Video</span>
+							</a>
+						</div>
+						<div class="col-xs-5">
+							<input type="button" value="Post">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/vendor.min.js"></script>
 	<script src="js/data.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
